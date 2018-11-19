@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+AutoUpdate-Show-In-Client: true
+OpenIDE-Module: amer.mfrs/1
+OpenIDE-Module-Implementation-Version: 8
+OpenIDE-Module-Layer: amer/mfrs/layer.xml
+OpenIDE-Module-Localizing-Bundle: amer/mfrs/Bundle.properties
+OpenIDE-Module-Requires: org.openide.windows.WindowManager
+
