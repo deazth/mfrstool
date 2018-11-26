@@ -30,6 +30,7 @@ import java.util.Scanner;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.SwingWorker;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.TableModel;
@@ -164,6 +165,11 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
     jScrollPane13 = new javax.swing.JScrollPane();
     tCVResult = new javax.swing.JTable();
     jPanel2 = new javax.swing.JPanel();
+    jPanel11 = new javax.swing.JPanel();
+    btnProductMaster = new javax.swing.JButton();
+    jPanel12 = new javax.swing.JPanel();
+    jScrollPane14 = new javax.swing.JScrollPane();
+    txtMiscExp = new javax.swing.JTextArea();
 
     jTabbedPane1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
 
@@ -866,15 +872,71 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.PanelCV.TabConstraints.tabTitle"), PanelCV); // NOI18N
 
+    jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jPanel11.border.title"))); // NOI18N
+
+    org.openide.awt.Mnemonics.setLocalizedText(btnProductMaster, org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.btnProductMaster.text")); // NOI18N
+    btnProductMaster.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnProductMasterActionPerformed(evt);
+      }
+    });
+
+    javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+    jPanel11.setLayout(jPanel11Layout);
+    jPanel11Layout.setHorizontalGroup(
+      jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel11Layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(btnProductMaster)
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    jPanel11Layout.setVerticalGroup(
+      jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel11Layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(btnProductMaster)
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+
+    jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jPanel12.border.title"))); // NOI18N
+
+    txtMiscExp.setColumns(20);
+    txtMiscExp.setRows(5);
+    jScrollPane14.setViewportView(txtMiscExp);
+
+    javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+    jPanel12.setLayout(jPanel12Layout);
+    jPanel12Layout.setHorizontalGroup(
+      jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 1001, Short.MAX_VALUE)
+    );
+    jPanel12Layout.setVerticalGroup(
+      jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel12Layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE)
+        .addContainerGap())
+    );
+
     javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
     jPanel2.setLayout(jPanel2Layout);
     jPanel2Layout.setHorizontalGroup(
       jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 1041, Short.MAX_VALUE)
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+          .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addContainerGap())
     );
     jPanel2Layout.setVerticalGroup(
       jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 622, Short.MAX_VALUE)
+      .addGroup(jPanel2Layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addContainerGap())
     );
 
     jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jPanel2.TabConstraints.tabTitle"), jPanel2); // NOI18N
@@ -1029,6 +1091,15 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
     pw.execute();
   }//GEN-LAST:event_btnCVDownloadActionPerformed
 
+  private void btnProductMasterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductMasterActionPerformed
+    // TODO add your handling code here:
+    mode = "Export Product Master";
+
+    BgWorker pw = new BgWorker();
+    pw.addPropertyChangeListener(this);
+    pw.execute();
+  }//GEN-LAST:event_btnProductMasterActionPerformed
+
   // <editor-fold defaultstate="collapsed" desc="auto swing objs"> 
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1051,6 +1122,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
   private javax.swing.JButton btnOSearch;
   private javax.swing.JButton btnProSave;
   private javax.swing.JButton btnProSearch;
+  private javax.swing.JButton btnProductMaster;
   private javax.swing.ButtonGroup buttonGroup1;
   private javax.swing.JComboBox<String> cboCVinput;
   private javax.swing.JComboBox<String> cboOMode;
@@ -1071,6 +1143,8 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
   private javax.swing.JLabel jLabel9;
   private javax.swing.JPanel jPanel1;
   private javax.swing.JPanel jPanel10;
+  private javax.swing.JPanel jPanel11;
+  private javax.swing.JPanel jPanel12;
   private javax.swing.JPanel jPanel2;
   private javax.swing.JPanel jPanel3;
   private javax.swing.JPanel jPanel4;
@@ -1084,6 +1158,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
   private javax.swing.JScrollPane jScrollPane11;
   private javax.swing.JScrollPane jScrollPane12;
   private javax.swing.JScrollPane jScrollPane13;
+  private javax.swing.JScrollPane jScrollPane14;
   private javax.swing.JScrollPane jScrollPane2;
   private javax.swing.JScrollPane jScrollPane3;
   private javax.swing.JScrollPane jScrollPane4;
@@ -1110,6 +1185,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
   private javax.swing.JTextField txtCurResult;
   private javax.swing.JTextField txtCurrInput;
   private javax.swing.JTextArea txtExpInput;
+  private javax.swing.JTextArea txtMiscExp;
   private javax.swing.JTextArea txtOInput;
   private javax.swing.JTextArea txtProInput;
   // End of variables declaration//GEN-END:variables
@@ -1128,6 +1204,8 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
   private String mode;
   private ArrayList<String> inputdata;
   private boolean noFileCHoosen;
+  private JTextArea outJTF;
+  private StringBuilder outSB;
 
   @Override
   public void componentOpened() {
@@ -1270,6 +1348,22 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
   }
 
+  private void prepOutBox(JTextArea jtf) {
+    outSB = new StringBuilder();
+    outJTF = jtf;
+
+    // clear current jtf;
+    outJTF.setText("");
+
+  }
+
+  private void printToBox(String line) {
+    outSB.append(line);
+    outSB.append(constant.LINE_SEPARATOR);
+
+    outJTF.setText(outSB.toString());
+  }
+
   private File getSaveLocation() {
     File savefile = null;
     noFileCHoosen = true;
@@ -1297,7 +1391,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
       case "Download CP/VAI":
         suggestfname = "cp_vai";
         break;
-      case "Download Product Master":
+      case "Export Product Master":
         suggestfname = "bossprodak";
         break;
       default:
@@ -1306,7 +1400,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
     }
 
     JFileChooser fc = new JFileChooser();
-    String filets = Utilities.tsToDateNow("yyMMdd");
+    String filets = Utilities.tsToDateNow("yyMMdd_HHmmss");
     fc.setFileFilter(new FileNameExtensionFilter("MS Excel", "xls"));
     fc.setSelectedFile(new File(suggestfname + "_" + filets + ".xls"));
 
@@ -1427,6 +1521,9 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
           break;
         case "Export Order NOVA < 2017":
           expNOVAOld();
+          break;
+        case "Export Product Master":
+          expProductMaster();
           break;
         default:
           break;
@@ -1787,27 +1884,83 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
       }
     }
 
-    private void expProductMaster(){
-      
+    private void expProductMaster() {
+      prepOutBox(txtMiscExp);
+      pbar.progress("finding meaning of life");
       File save = getSaveLocation();
 
       if (noFileCHoosen) {
         return;
       }
-      
+
       ExcelCreator ec = new ExcelCreator(save);
       String[] header = {
-        "PRODUCT", "PARTNUM", "PRICE", "CURRENCY", "PRICELIST", 
-        "PRICE_TYPE_CD", "PROD_CD", "NETWORK_ELEMENT_TYPE", "PRODUCT_GROUP", "TYPE", 
-        "BILLABLE_FLAG", "INDICATOR", "UOM_CD", "PRODUCT_NETWORK_LAYER", "NETWORK_TYPE", 
+        "PRODUCT", "PARTNUM", "PRICE", "CURRENCY", "PRICELIST",
+        "PRICE_TYPE_CD", "PROD_CD", "NETWORK_ELEMENT_TYPE", "PRODUCT_GROUP", "TYPE",
+        "BILLABLE_FLAG", "INDICATOR", "UOM_CD", "PRODUCT_NETWORK_LAYER", "NETWORK_TYPE",
         "NETWORK_PRODUCT_TYPE", "SERVICE_TYPE_2", "FRS_NONFRS_IND"
       };
-      
-      
-      
-      
+      ec.addSheet("Product Master", header);
+
+      pbar.progress("Counting beans");
+      printToBox("Count of product master by FRS indicator:");
+      printToBox("");
+
+      // get the counts
+      int totalcount = 0;
+      try {
+        ResultSet rs = dbStg.executeSelect("select \n"
+                + "    frs_nonfrs_ind, count(1)\n"
+                + " from MFRSADM.VIEW_NOVA_PRODUCT_MASTER@EDWH_LINK_OPERATE\n"
+                + " group by frs_nonfrs_ind");
+
+        while (rs.next()) {
+          String type = dbHandler.dbGetString(rs, 1);
+          int count = rs.getInt(2);
+
+          printToBox((type.isEmpty() ? "<Null> : " : type + " : ") + count);
+          totalcount += count;
+
+        }
+
+        printToBox("");
+        printToBox("Total : " + totalcount);
+
+      } catch (SQLException e) {
+        Utilities.log(me, "error getting PMI counts - " + e.getMessage(), constant.ERROR);
+        Utilities.logStack(me, e);
+      }
+
+      // export the records
+      try {
+        pbar.progress("finding null beans");
+        ResultSet rs = dbStg.executeSelect("select \n"
+                + "    *\n"
+                + "from MFRSADM.VIEW_NOVA_PRODUCT_MASTER@EDWH_LINK_OPERATE\n"
+                + "where frs_nonfrs_ind is null");
+        
+        pbar.progress("populating excel");
+
+        while (rs.next()) {
+          ArrayList<String> data = getExpData(rs, header);
+
+          ec.addline(data);
+        }
+      } catch (SQLException e) {
+        Utilities.log(me, "error getting null-indicator product master - " + e.getMessage(), constant.ERROR);
+        Utilities.logStack(me, e);
+      }
+
+      ec.flush();
+
+      int choice = JOptionPane.showConfirmDialog(null, "Export completed. Show output?", "Dah siap...", JOptionPane.YES_NO_OPTION);
+
+      if (choice == JOptionPane.YES_OPTION) {
+        ec.openOutDir();
+      }
+
     }
-    
+
     private ArrayList<String> getExpData(ResultSet rs, String[] header) {
       ArrayList<String> data = new ArrayList<String>();
 
@@ -2169,7 +2322,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
         }
 
       }
-      
+
       tCVResult.setModel(tiCVRes);
 
       int counter = 0;
@@ -2207,17 +2360,16 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
           ResultSet rs = psearch.executeQuery();
 
           // load the data into table
-          while(rs.next()){
+          while (rs.next()) {
 //            Utilities.log(me, "got data", constant.ERROR);
             tiCVRes.add(getExpData(rs, tiCVRes.getHeader()));
           }
-          
-//          Utilities.log(me, "table size: " + tiCVRes.getRowCount(), constant.ERROR);
 
+//          Utilities.log(me, "table size: " + tiCVRes.getRowCount(), constant.ERROR);
         } catch (SQLException e) {
           Utilities.log(me, "error searching for " + input + " " + e.toString(), constant.ERROR);
         }
-        
+
         tiCVRes.refire();
 
       }
@@ -2352,8 +2504,8 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     }
 
-    private void cvDownload(){
-      
+    private void cvDownload() {
+
       Utilities.log(me, "checking for data availability", constant.DEBUG);
       int rowcount = tiCVRes.getRowCount();
       if (rowcount == 0) {
@@ -2386,7 +2538,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
       Utilities.log(me, "flushing the excel file", constant.DEBUG);
       ec.flush();
     }
-    
+
     private void oDownload() {
       int counteai = tiOEAI.getRowCount();
       int countpro = tiOPro.getRowCount();
