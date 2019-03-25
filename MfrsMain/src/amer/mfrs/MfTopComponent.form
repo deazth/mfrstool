@@ -197,6 +197,7 @@
                           <Connection code="tiOEAI" type="code"/>
                         </Property>
                         <Property name="autoResizeMode" type="int" value="0"/>
+                        <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -240,6 +241,7 @@
                           <Connection code="tiOPro" type="code"/>
                         </Property>
                         <Property name="autoResizeMode" type="int" value="0"/>
+                        <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -283,6 +285,7 @@
                           <Connection code="tiOPur" type="code"/>
                         </Property>
                         <Property name="autoResizeMode" type="int" value="0"/>
+                        <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -441,6 +444,7 @@
                       <Connection code="tiProRes" type="code"/>
                     </Property>
                     <Property name="autoResizeMode" type="int" value="0"/>
+                    <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -623,6 +627,7 @@
                           <Connection code="tiCSAcc" type="code"/>
                         </Property>
                         <Property name="autoResizeMode" type="int" value="0"/>
+                        <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -666,6 +671,7 @@
                           <Connection code="tiCSSvc" type="code"/>
                         </Property>
                         <Property name="autoResizeMode" type="int" value="0"/>
+                        <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -941,6 +947,7 @@
                         </Column>
                       </Table>
                     </Property>
+                    <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -1360,6 +1367,7 @@
                       <Connection code="tiCVRes" type="code"/>
                     </Property>
                     <Property name="autoResizeMode" type="int" value="0"/>
+                    <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                   </Properties>
                 </Component>
               </SubComponents>

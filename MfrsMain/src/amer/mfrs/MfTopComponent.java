@@ -192,6 +192,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     tOEai.setModel(tiOEAI);
     tOEai.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+    tOEai.setCellSelectionEnabled(true);
     jScrollPane1.setViewportView(tOEai);
 
     javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -211,6 +212,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     tOPro.setModel(tiOPro);
     tOPro.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+    tOPro.setCellSelectionEnabled(true);
     jScrollPane4.setViewportView(tOPro);
 
     javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -230,6 +232,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     tOPur.setModel(tiOPur);
     tOPur.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+    tOPur.setCellSelectionEnabled(true);
     jScrollPane5.setViewportView(tOPur);
 
     javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -317,6 +320,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     tProResult.setModel(tiProRes);
     tProResult.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+    tProResult.setCellSelectionEnabled(true);
     jScrollPane2.setViewportView(tProResult);
 
     org.openide.awt.Mnemonics.setLocalizedText(btnProSearch, org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.btnProSearch.text")); // NOI18N
@@ -412,6 +416,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     tCSAcc.setModel(tiCSAcc);
     tCSAcc.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+    tCSAcc.setCellSelectionEnabled(true);
     jScrollPane7.setViewportView(tCSAcc);
 
     javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -431,6 +436,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     tCSSvc.setModel(tiCSSvc);
     tCSSvc.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+    tCSSvc.setCellSelectionEnabled(true);
     jScrollPane8.setViewportView(tCSSvc);
 
     javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -604,6 +610,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
         return canEdit [columnIndex];
       }
     });
+    tCurrency.setCellSelectionEnabled(true);
     jScrollPane9.setViewportView(tCurrency);
 
     jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jPanel1.border.title"))); // NOI18N
@@ -824,6 +831,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     tCVResult.setModel(tiCVRes);
     tCVResult.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+    tCVResult.setCellSelectionEnabled(true);
     jScrollPane13.setViewportView(tCVResult);
 
     javax.swing.GroupLayout PanelCVLayout = new javax.swing.GroupLayout(PanelCV);
@@ -1307,6 +1315,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
     btnCVSearch.setEnabled(false);
     btnCVDownload.setEnabled(false);
     btnExpNp2017.setEnabled(false);
+    btnProductMaster.setEnabled(false);
   }
 
   private void unlockSearch() {
@@ -1321,6 +1330,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
     btnCVSearch.setEnabled(true);
     btnCVDownload.setEnabled(true);
     btnExpNp2017.setEnabled(true);
+    btnProductMaster.setEnabled(true);
   }
 
   private boolean loadInput(JTextArea inputArea) {
