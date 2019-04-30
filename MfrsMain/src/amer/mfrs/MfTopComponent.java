@@ -190,6 +190,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jPanel5.border.title"))); // NOI18N
 
+    tOEai.setAutoCreateRowSorter(true);
     tOEai.setModel(tiOEAI);
     tOEai.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
     tOEai.setCellSelectionEnabled(true);
@@ -210,6 +211,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jPanel6.border.title"))); // NOI18N
 
+    tOPro.setAutoCreateRowSorter(true);
     tOPro.setModel(tiOPro);
     tOPro.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
     tOPro.setCellSelectionEnabled(true);
@@ -230,6 +232,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jPanel7.border.title"))); // NOI18N
 
+    tOPur.setAutoCreateRowSorter(true);
     tOPur.setModel(tiOPur);
     tOPur.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
     tOPur.setCellSelectionEnabled(true);
@@ -318,6 +321,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jLabel3.text")); // NOI18N
 
+    tProResult.setAutoCreateRowSorter(true);
     tProResult.setModel(tiProRes);
     tProResult.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
     tProResult.setCellSelectionEnabled(true);
@@ -414,6 +418,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jPanel8.border.title"))); // NOI18N
 
+    tCSAcc.setAutoCreateRowSorter(true);
     tCSAcc.setModel(tiCSAcc);
     tCSAcc.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
     tCSAcc.setCellSelectionEnabled(true);
@@ -434,6 +439,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jPanel9.border.title"))); // NOI18N
 
+    tCSSvc.setAutoCreateRowSorter(true);
     tCSSvc.setModel(tiCSSvc);
     tCSSvc.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
     tCSSvc.setCellSelectionEnabled(true);
@@ -564,6 +570,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     org.openide.awt.Mnemonics.setLocalizedText(jLabel7, org.openide.util.NbBundle.getMessage(MfTopComponent.class, "MfTopComponent.jLabel7.text")); // NOI18N
 
+    tCurrency.setAutoCreateRowSorter(true);
     tCurrency.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
         { new Integer(36), "A$", "Australian Dollar"},
@@ -829,6 +836,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
     txtCVInput.setRows(5);
     jScrollPane12.setViewportView(txtCVInput);
 
+    tCVResult.setAutoCreateRowSorter(true);
     tCVResult.setModel(tiCVRes);
     tCVResult.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
     tCVResult.setCellSelectionEnabled(true);
@@ -2130,7 +2138,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
           ResultSet rs = psSvc.executeQuery();
 
           while (rs.next()) {
-            ArrayList<String> data = new ArrayList<String>();
+            ArrayList<String> data = new ArrayList<>();
             data.add(dbHandler.dbGetString(rs, "ACCOUNT_NO"));
             data.add(dbHandler.dbGetString(rs, "service_obj_Id0"));
             data.add(dbHandler.dbGetString(rs, "service_no"));
@@ -2389,7 +2397,7 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
     private void getOrder(String input, ResultSet rs, PreparedStatement psBPro, PreparedStatement psBPur) throws SQLException {
 
       while (rs.next()) {
-        ArrayList<String> data = new ArrayList<String>();
+        ArrayList<String> data = new ArrayList<>();
 
         data.add(dbHandler.dbGetString(rs, "order_number"));
         data.add(dbHandler.dbGetString(rs, "asset_integ_id"));
@@ -2606,11 +2614,12 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     private void loadProduct(ResultSet rs, String input) {
 
-      ArrayList<String> data = new ArrayList<String>();
+      ArrayList<String> data;
 
       try {
 
         while (rs.next()) {
+          data = new ArrayList<>();
           data.add(dbHandler.dbGetString(rs, "NAME"));
           data.add(dbHandler.dbGetString(rs, "POID_ID0"));
           data.add(dbHandler.dbGetString(rs, "BILL_DESCRIPTION"));
@@ -2645,11 +2654,12 @@ public final class MfTopComponent extends TopComponent implements PropertyChange
 
     private void loadPurchased(ResultSet rs, String input) {
 
-      ArrayList<String> data = new ArrayList<String>();
+      ArrayList<String> data; // = new ArrayList<String>();
 
       try {
 
         while (rs.next()) {
+          data = new ArrayList<>();
           data.add(dbHandler.dbGetString(rs, "PURCHASED_POID"));
           data.add(dbHandler.dbGetString(rs, "PRODUCT_POID"));
           data.add(dbHandler.dbGetString(rs, "PRODUCT_DESCR"));
